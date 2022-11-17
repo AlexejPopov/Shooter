@@ -40,8 +40,8 @@ int main()
 		system("cls");
 		switch (X)
 		{
-		case 'w':case 'w':case 'w':case 'w':case 'w':case 'w':case 'w':case 'w':
-		case 'W':case 'w':case 'W':case 'W':case 'W':case 'W':case 'W':case 'W':
+		case 'w':
+		case 'W':
 			cout << "				   Воин идет вперед!" << endl;
 			break;
 		case 's':
