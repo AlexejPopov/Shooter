@@ -1,4 +1,4 @@
-#include <stdlib.h>
+ï»¿#include <stdlib.h>
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
@@ -13,24 +13,24 @@ int main()
 	do
 	{
 		system("cls");
-		cout << R"(                            Äîáðî ïîæàëîâàòü â èãðó, ìîé äðóã!
-                             Íèæå ïðèâåäåíû äåéñòâèÿ â èãðå:
+		cout << R"(                            Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ Ð² Ð¸Ð³Ñ€Ñƒ, Ð¼Ð¾Ð¹ Ð´Ñ€ÑƒÐ³!
+                             ÐÐ¸Ð¶Ðµ Ð¿Ñ€Ð¸Ð²ÐµÐ´ÐµÐ½Ñ‹ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ Ð² Ð¸Ð³Ñ€Ðµ:
 
-					w - Âïåðåä
-					s - Ííàçàä
-					a - Âëåâî
-					d - Âïðàâî
-				   Space  - Ïðûæîê
-				   Enter  - Îãîíü
-				   Escape - Âûõîä èç èãðû
+					w - Ð’Ð¿ÐµÑ€ÐµÐ´
+					s - ÐÐ½Ð°Ð·Ð°Ð´
+					a - Ð’Ð»ÐµÐ²Ð¾
+					d - Ð’Ð¿Ñ€Ð°Ð²Ð¾
+				   Space  - ÐŸÑ€Ñ‹Ð¶Ð¾Ðº
+				   Enter  - ÐžÐ³Ð¾Ð½ÑŒ
+				   Escape - Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¸Ð³Ñ€Ñ‹
 
 					)";
-		cout << "				   Ââåäèòå êîìàíäó: "; X = _getch();//cin >> X;
+		cout << "				   Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñƒ: "; X = _getch();//cin >> X;
 		if (X == 'W' || X == 'w' || X == 'S' || X == 's' || X == 'A' || X == 'a' || X == 'd' || X == 'D' || X == ' ' || X == 27)
 			break;
 		else
 		{
-			cout << "\n			Ââåäåíî íåâåðíîå äåéñòâèå. Ïîâòîðèòå ââîä!" << endl;
+			cout << "\n			Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐ²ÐµÑ€Ð½Ð¾Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ. ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´!" << endl;
 			Sleep(2000);
 		}
 	} while (true);
@@ -42,29 +42,29 @@ int main()
 		{
 		case 'w':case 'w':case 'w':case 'w':case 'w':case 'w':case 'w':case 'w':
 		case 'W':case 'w':case 'W':case 'W':case 'W':case 'W':case 'W':case 'W':
-			cout << "				   Âîèí èäåò âïåðåä!" << endl;
+			cout << "				   Ð’Ð¾Ð¸Ð½ Ð¸Ð´ÐµÑ‚ Ð²Ð¿ÐµÑ€ÐµÐ´!" << endl;
 			break;
 		case 's':
 		case 'S':
-			cout << "				   Âîèí èäåò íàçàä!" << endl;
+			cout << "				   Ð’Ð¾Ð¸Ð½ Ð¸Ð´ÐµÑ‚ Ð½Ð°Ð·Ð°Ð´!" << endl;
 			break;
 		case 'a':
 		case 'A':
-			cout << "				   Âîèí èäåò âëåâî!" << endl;
+			cout << "				   Ð’Ð¾Ð¸Ð½ Ð¸Ð´ÐµÑ‚ Ð²Ð»ÐµÐ²Ð¾!" << endl;
 			break;
 		case 'd':
 		case 'D':
-			cout << "				   Âîèí èäåò âïðàâî!" << endl;
+			cout << "				   Ð’Ð¾Ð¸Ð½ Ð¸Ð´ÐµÑ‚ Ð²Ð¿Ñ€Ð°Ð²Ð¾!" << endl;
 			break;
 		case ' ':
-			cout << "				   Âîèí ïðûãàåò!" << endl;
+			cout << "				   Ð’Ð¾Ð¸Ð½ Ð¿Ñ€Ñ‹Ð³Ð°ÐµÑ‚!" << endl;
 			break;
 
 		default:
-			cout << "				     Èçûäè äåìîí!" << endl;
+			cout << "				     Ð˜Ð·Ñ‹Ð´Ð¸ Ð´ÐµÐ¼Ð¾Ð½!" << endl;
 			break;
 		}
-		cout << "				   Ââåäèòå êîìàíäó: "; X = _getch();//cin >> X;
+		cout << "				   Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñƒ: "; X = _getch();//cin >> X;
 	} while (X != 27);
 }
 
