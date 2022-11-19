@@ -1,70 +1,36 @@
-﻿#include <stdlib.h>
-#include <iostream>
-#include <conio.h>
-#include <windows.h>
+﻿#include<iostream>
+#include<conio.h>
 using namespace std;
 
-int main()
+#define Escape		27
+#define Enter		13
+#define UP_ARROW	72
+#define DOWN_ARROW	80
+#define LEFT_ARROW	75
+#define RIGHT_ARROW	77
+
+/* Функция _getch() ожидает нажатие клавиши и возвращает ASCII-код нажатой клавиши
+cout << (int)key << "\t" << key << endl;
+(int)key - явное преобразование переменной 'key' в тип данных 'char' */
+
+void main()
 {
-	system("chcp 1251");
-	system("cls");
-	cout << "-----------------------------------------Shooter!-----------------------------------------\n" << endl;
-	char X = '+';
+	setlocale(LC_ALL, "");
+	char key;
 	do
 	{
-		system("cls");
-		cout << R"(                            Добро пожаловать в игру, мой друг!
-                             Ниже приведены действия в игре:
-
-					w - Вперед
-					s - Нназад
-					a - Влево
-					d - Вправо
-				   Space  - Прыжок
-				   Enter  - Огонь
-				   Escape - Выход из игры
-
-					)";
-		cout << "				   Введите команду: "; X = _getch();//cin >> X;
-		if (X == 'W' || X == 'w' || X == 'S' || X == 's' || X == 'A' || X == 'a' || X == 'd' || X == 'D' || X == ' ' || X == 27)
-			break;
-		else
+		key = _getch();	
+		switch (key)
 		{
-			cout << "\n			Введено неверное действие. Повторите ввод!" << endl;
-			Sleep(2000);
+		case 'w':case 'W':case UP_ARROW:	cout << "Вперед" << endl; break;
+		case 's':case 'S':case DOWN_ARROW:	cout << "Назад" << endl;  break;
+		case 'a':case 'A':case LEFT_ARROW:	cout << "Влево" << endl;  break;
+		case 'd':case 'D':case RIGHT_ARROW:	cout << "Вправо" << endl; break;
+		case ' ':cout << "Прыжок" << endl; break;
+		case Enter: cout << "Огонь!" << endl; break;
+		case Escape: cout << "Выход" << endl;
+		case -32:break;
+		default: cout << "Error" << endl;
 		}
-	} while (true);
-	do
-	{
-		Sleep(500);
-		system("cls");
-		switch (X)
-		{
-		case 'w':
-		case 'W':
-			cout << "				   Воин идет вперед!" << endl;
-			break;
-		case 's':
-		case 'S':
-			cout << "				   Воин идет назад!" << endl;
-			break;
-		case 'a':
-		case 'A':
-			cout << "				   Воин идет влево!" << endl;
-			break;
-		case 'd':
-		case 'D':
-			cout << "				   Воин идет вправо!" << endl;
-			break;
-		case ' ':
-			cout << "				   Воин прыгает!" << endl;
-			break;
-
-		default:
-			cout << "				     Изыди демон!" << endl;
-			break;
-		}
-		cout << "				   Введите команду: "; X = _getch();//cin >> X;
-	} while (X != 27);
+	} while (key != Escape);
 }
-
